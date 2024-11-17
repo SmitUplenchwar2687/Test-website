@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: linear-gradient(to bottom right, #ffffff, #f5f5f5);
+    color: #000000;
+  }
+}
+
+.glass {
+  background: rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
